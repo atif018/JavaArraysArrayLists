@@ -26,7 +26,7 @@ public class ArraysArrayLists
         
         for (i = 0; i < 10; i++)
         {
-            System.out.println(numbers[i] + " ");
+            System.out.print(numbers[i] + " ");
         }
 
     }
