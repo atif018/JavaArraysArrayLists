@@ -14,7 +14,7 @@ public class ArraysArrayLists
         
         Scanner input = new Scanner(System.in);
         
-        while (i < 10)
+        while (i < numbers.length)
         {
             System.out.print("Please enter a number: ");
             int value = input.nextInt();
@@ -24,7 +24,7 @@ public class ArraysArrayLists
         
         System.out.print("The numbers you entered are ");
         
-        for (i = 0; i < 10; i++)
+        for (i = 0; i < numbers.length; i++)
         {
             
             if (i == 8)
@@ -49,7 +49,7 @@ public class ArraysArrayLists
         int[] numbersTwo = new int[10];
         int j = 9;
         
-        for (i = 0; i < 10; i++)
+        for (i = 0; i < numbers.length; i++)
         {
             
             numbersTwo[j] = numbers[i];
@@ -59,7 +59,7 @@ public class ArraysArrayLists
         
         System.out.print("The numbers you entered are ");
         
-        for (j = 0; j < 10; j++)
+        for (j = 0; j < numbersTwo.length; j++)
         {
             
             if (j == 8)
@@ -75,5 +75,37 @@ public class ArraysArrayLists
                 System.out.print(numbersTwo[j] + ", ");
             }
         }
+        
+        System.out.println();
+        System.out.println("The following part will use an enhanced for loop to total the elements in the original array.");
+        
+        int total = 0;
+        
+        for (int value : numbers)
+        {
+            
+            total = total + value;
+            
+        }
+        
+        System.out.println("The following part will give the value and position of the highest value in the numbers array.");
+        
+        int highestValue = 0;
+        int highestArrayPosition = 0;
+        
+        for (i = 0; i < numbers.length; i++)
+        {
+            
+            if (numbers[i] > highestValue)
+            {
+                
+                highestValue = numbers[i];
+                highestArrayPosition = i;
+                
+            }
+            
+        }
+        
+        System.out.println("The highest value in the numbers array is " + highestValue + " and the position of that value in the array is numbers[" + highestArrayPosition + "].");
     }
 }
