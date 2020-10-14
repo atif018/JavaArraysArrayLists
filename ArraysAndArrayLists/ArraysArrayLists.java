@@ -16,7 +16,7 @@ public class ArraysArrayLists
         
         while (i < 10)
         {
-            System.out.println("Please enter a number: ");
+            System.out.print("Please enter a number: ");
             int value = input.nextInt();
             numbers[i] = value;
             i++;
@@ -26,8 +26,54 @@ public class ArraysArrayLists
         
         for (i = 0; i < 10; i++)
         {
-            System.out.print(numbers[i] + " ");
+            
+            if (i == 8)
+            {
+                System.out.print(numbers[i] + " ");
+            }
+            else if (i == 9)
+            {
+                System.out.print("and " + numbers[i]);
+            }
+            else 
+            {
+                System.out.print(numbers[i] + ", ");
+            }
+            
         }
-
+        
+        System.out.println();
+        System.out.println("The numbers that were entered will now be reversed.");
+        System.out.println("This will involve using a second array and the numbers will be printed from that array.");
+        
+        int[] numbersTwo = new int[10];
+        int j = 9;
+        
+        for (i = 0; i < 10; i++)
+        {
+            
+            numbersTwo[j] = numbers[i];
+            j--;
+            
+        }
+        
+        System.out.print("The numbers you entered are ");
+        
+        for (j = 0; j < 10; j++)
+        {
+            
+            if (j == 8)
+            {
+                System.out.print(numbersTwo[j] + " ");
+            }
+            else if (j == 9)
+            {
+                System.out.print("and " + numbersTwo[j]);
+            }
+            else
+            {
+                System.out.print(numbersTwo[j] + ", ");
+            }
+        }
     }
 }
