@@ -107,5 +107,25 @@ public class ArraysArrayLists
         }
         
         System.out.println("The highest value in the numbers array is " + highestValue + " and the position of that value in the array is numbers[" + highestArrayPosition + "].");
+    
+        System.out.println("The following part of the program will send the inputs stored in the numbers array to a method which will add each individual number with the following number and then return the array.");
+        System.out.println("For example, if the array contains 1, 2, 3, 4, 5, then 3, 5, 7, 9 will be returned.");
+        
+        int[] methodArray = new int[10];
+        methodArray = addNumbers(numbers);
+    }
+    
+    public static int[] addNumbers(int[] array)
+    {
+        
+        for (int i = 0; i < array.length; i++)
+        {
+            
+            array[i] = array[i] + array[i + 1];
+        
+        }
+        
+        return array;
+        
     }
 }

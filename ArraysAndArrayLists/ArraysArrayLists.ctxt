@@ -2,4 +2,6 @@
 comment0.target=ArraysArrayLists
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
-numComments=2
+comment2.params=array
+comment2.target=int[]\ addNumbers(int[])
+numComments=3
