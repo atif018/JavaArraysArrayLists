@@ -166,18 +166,31 @@ public class ArraysArrayLists
         String addedName = "";
         int namePosition;
         
-        while (!addedName.equals("q") || !addedName.equals("Q"))
+        while (!"q".equals(addedName))
         {
             
-            System.out.println("Please enter a name: ");
+            System.out.println("Please enter a name (Enter q to quit/end): ");
             addedName = input.next();
-            names.add(addedName);
+            
+            if (!"q".equals(addedName))
+            {
+                names.add(addedName);
+            }
             
         }
         
-        System.out.println("Please enter a number for the position of the ArrayList where you would like to retrieve the current value: ");
+        System.out.println("The values entered into the ArrayList are: ");
+        System.out.println(names);
+        System.out.println("Please enter a number for the position of the ArrayList where you would like to retrieve the current value.");
         namePosition = input.nextInt();
         System.out.println(names.get(namePosition));
+        System.out.println("Please enter a position for which you would like to overwrite the existing value.");
+        namePosition = input.nextInt();
+        System.out.println("Please enter the new name: ");
+        addedName = input.next();
+        names.set(namePosition, addedName);
+        System.out.println("The current ArrayList now contains: ");
+        System.out.println(names);
         
     }
     
